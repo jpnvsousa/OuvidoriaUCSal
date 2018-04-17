@@ -104,14 +104,13 @@ color:white;
 </head>
 <body>
 <div class="link" align="center" id="sessaoouvidoria"><h1>SETOR DE OUVIDORIA</h1><br><br></div>
-
-
-  <div>
+ 
   	<form class="form-signin" action="LoginController" method="post">
         <div class="form-label-group">
           <input name="login" type="text" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
           <label for="inputEmail">Identificação de usuário</label>
         </div>
+
 
         <div class="form-label-group">
           <input name="senha" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
@@ -120,9 +119,10 @@ color:white;
 
         <button class="btn btn-dark btn-primary btn-block " type="submit">Acessar</button>
       </form>
+      
       <div class="footer">
     </div>
-  </div>
+ 
     <nav class="navbar navbar-dark bg-dark" id="memamou">        
         <br> <img
           src="https://www.ucsal.br/images/logo_nova_ucsal_slogan.png" alt="">

@@ -25,6 +25,18 @@ public class LoginController extends HttpServlet {
 		
 		if(!login.trim().equals("") && !senha.trim().equals("")) {
 			
+			Usuario usuario = new Usuario();
+			usuario.setLogin(login);
+			usuario.setSenha(senha);
+			request.getSession().setAttribute("usuario", usuario);
+
+			if(login.equals("admin") && senha.equals("admin")) {
+				usuario.setTipoUsuario(TipoUsuario.ADMIN);
+				response.sendRedirect("admin.jsp");
+			}else {
+				usuario.setTipoUsuario(TipoUsuario.ALUNO);
+				response.sendRedirect("user.jsp");
+			}
 		}else {
 			response.sendRedirect("login.jsp");
 		}
